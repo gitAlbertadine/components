@@ -1,73 +1,41 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <style>
-        *{
-            box-sizing: border-box;
+    <link rel="stylesheet" href="style.css">
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+    crossorigin="anonymous"></script>
+    <script>
+    $(function() {
+    $(".toggle").on("click", function() {
+        if ($(".item").hasClass("active")) {
+            $(".item").removeClass("active");
+        } else {
+            $(".item").addClass("active");
         }
-        .listnav{
-background-color: #bada55;
-margin: 1rem 0;
-        }
-        .listnav ul{
-overflow: auto;
-        }
-        .listnav li{
-            float: left;
-            list-style: none;
-            width: 20%;
-        }
-        .listnav a{
-            color: #333;
-            font-weight: 900;
-            text-decoration: none;
-            text-align: center;
-            display: block;
-        }
-        .listnav a:hover{
-            color: cornflowerblue;
-        }
-    .flexnav1{
-        background-color: #bada55;
-        margin: 1rem 0;
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: nowrap;
-    }
-    .flexnav1 a{
-        color: #333;
-        font-weight: 900;
-        text-decoration: none;
-        text-align: center;
-        flex:100% 1 1;
-        
-    }
-    .flexnav1 a:hover{
-        color: cornflowerblue;
-    }
-    </style>
+    });
+});
+    </script>
 </head>
 <body>
-  <nav class="listnav">
-      <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Service</a></li>
-          <li><a href="#">Product</a></li>
-          <li><a href="#">Privacy</a></li>
-        
-      </ul>
-  </nav> 
-  <nav class="flexnav1">
-      <a href="">Home</a>
-      <a href="">About</a>
-      <a href="">Service</a>
-      <a href="">Product</a>
-      <a href="">Privacy</a>
-   
-  </nav> 
+    <nav>
+        <ul class="menu">
+            <li class="logo"><a href="#">FollowAndrew.dev</a></li>
+            <li class="item"><a href="#">Home</a></li>
+            <li class="item"><a href="#">About</a></li>
+            <li class="item"><a href="#">Services</a></li>
+            </li>
+            <li class="item button"><a href="#">Log In</a></li>
+            <li class="item button secondary"><a href="#">Sign Up</a></li>
+            <li class="toggle"><span class="bars"></span></li>
+        </ul>
+    </nav>
+    <main>
+        <a href="https://youtube.com/c/FollowAndrew" style="position:fixed;bottom:0;color:teal;display:block;text-align:center;font-size:1em">https://youtube.com/c/FollowAndrew</a>
+    </main>
 </body>
 </html>
